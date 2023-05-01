@@ -105,20 +105,25 @@ export const PRODUCT_PRICES = {
 
 export const PRODUCT_FLAVORS = {
     [GUNNPOD_AIR_3000]: [
-        {flavorCombo: ["water mellow", "ice"], flavorInfo: "", image: '',}
-    ], [VAL_4500]: [
-        {flavorCombo: [""], flavorInfo: "", image: '',}
-    ], [DRAGBAR_5000]: [
-        {flavorCombo: [""], flavorInfo: "", image: '',}
-    ], [IGET_PRO_5000]: [
-        {flavorCombo: [""], flavorInfo: "", image: '',}
-    ], [ELF_BAR_5000]: [
-        {flavorCombo: [""], flavorInfo: "", image: '',}
+        {nicotine: [5], flavorCombo: ["water mellow", "ice"], flavorInfo: "", image: '',}
+    ],
+    [VAL_4500]: [
+        {nicotine: [5], flavorCombo: [""], flavorInfo: "", image: '',}
+    ],
+    [DRAGBAR_5000]: [
+        {nicotine: [5], flavorCombo: [""], flavorInfo: "", image: '',}
+    ],
+    [IGET_PRO_5000]: [
+        {nicotine: [5], flavorCombo: [""], flavorInfo: "", image: '',}
+    ],
+    [ELF_BAR_5000]: [
+        {nicotine: [5], flavorCombo: [""], flavorInfo: "", image: '',}
     ],
     [DRAGBAR_6000]: [
-        {flavorCombo: [""], flavorInfo: "", image: '',}
-    ], [NORBAR]: [
-        {flavorCombo: [""], flavorInfo: "", image: '',}
+        {nicotine: [5], flavorCombo: [""], flavorInfo: "", image: '',}
+    ],
+    [NORBAR]: [
+        {nicotine: [5], flavorCombo: [""], flavorInfo: "", image: '',}
     ],
 }
 export const PRODUCTS = {
@@ -127,7 +132,10 @@ export const PRODUCTS = {
             title: "GUNNPOD AIR 3000",
             category: GUNNPOD_AIR_3000,
             flavorsInfo: PRODUCT_FLAVORS[GUNNPOD_AIR_3000],
-            description: "",
+            description: {
+                quantity: '',
+                detail: '',
+            },
             images: PRODUCT_FLAVORS[GUNNPOD_AIR_3000][0]?.images,
             prices: PRODUCT_PRICES[GUNNPOD_AIR_3000]
         },
@@ -137,7 +145,10 @@ export const PRODUCTS = {
             title: "VAL 4500",
             category: VAL_4500,
             flavorsInfo: PRODUCT_FLAVORS[VAL_4500],
-            description: "",
+            description: {
+                quantity: '',
+                detail: '',
+            },
             images: PRODUCT_FLAVORS[VAL_4500][0]?.images,
             prices: PRODUCT_PRICES[VAL_4500]
         },
@@ -147,7 +158,10 @@ export const PRODUCTS = {
             title: "DRAGBAR 5000",
             category: DRAGBAR_5000,
             flavorsInfo: PRODUCT_FLAVORS[DRAGBAR_5000],
-            description: "",
+            description: {
+                quantity: '',
+                detail: '',
+            },
             images: PRODUCT_FLAVORS[DRAGBAR_5000][0]?.images,
             prices: PRODUCT_PRICES[DRAGBAR_5000]
         },
@@ -157,7 +171,10 @@ export const PRODUCTS = {
             title: "IGET PRO 5000",
             category: IGET_PRO_5000,
             flavorsInfo: PRODUCT_FLAVORS[IGET_PRO_5000],
-            description: "",
+            description: {
+                quantity: '',
+                detail: '',
+            },
             images: PRODUCT_FLAVORS[IGET_PRO_5000][0]?.images,
             prices: PRODUCT_PRICES[IGET_PRO_5000]
         },
@@ -167,7 +184,10 @@ export const PRODUCTS = {
             title: "ELF BAR 5000",
             category: ELF_BAR_5000,
             flavorsInfo: PRODUCT_FLAVORS[ELF_BAR_5000],
-            description: "",
+            description: {
+                quantity: '',
+                detail: '',
+            },
             images: PRODUCT_FLAVORS[ELF_BAR_5000][0]?.images,
             prices: PRODUCT_PRICES[ELF_BAR_5000]
         },
@@ -176,7 +196,10 @@ export const PRODUCTS = {
             title: "DRAGBAR 6000",
             category: DRAGBAR_6000,
             flavorsInfo: PRODUCT_FLAVORS[DRAGBAR_6000],
-            description: "",
+            description: {
+                quantity: '',
+                detail: '',
+            },
             images: PRODUCT_FLAVORS[DRAGBAR_6000][0]?.images,
             prices: PRODUCT_PRICES[DRAGBAR_6000]
         },
@@ -185,7 +208,10 @@ export const PRODUCTS = {
             title: "NORBAR",
             category: NORBAR,
             flavorsInfo: PRODUCT_FLAVORS[NORBAR],
-            description: "",
+            description: {
+                quantity: '',
+                detail: '',
+            },
             images: PRODUCT_FLAVORS[NORBAR][0]?.images,
             prices: PRODUCT_PRICES[NORBAR]
         },
@@ -200,7 +226,8 @@ export const productDisplayAll = () => {
             send.push({
                 title: (product?.title + flavor?.flavorCombo.join(" - ")).toUpperCase(),
                 category: product?.category,
-                description: product?.description,
+                nicotine: flavor?.nicotine.join(", "),
+                description: product?.description?.detail,
                 image: flavor?.image,
                 flavor: flavor?.flavorCombo.join(" - ").toUpperCase(),
                 extraFlavorInformation: flavor?.flavorInfo,
@@ -224,7 +251,8 @@ export const productDisplayByCategory = (category) => {
         send.push({
             title: (product?.title + flavor?.flavorCombo.join(" - ")).toUpperCase(),
             category: product?.category,
-            description: product?.description,
+            nicotine: flavor?.nicotine.join(", "),
+            description: product?.description?.detail,
             image: flavor?.image,
             flavor: flavor?.flavorCombo.join(" - ").toUpperCase(),
             extraFlavorInformation: flavor?.flavorInfo,

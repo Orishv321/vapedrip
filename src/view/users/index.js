@@ -31,7 +31,11 @@ export default function UserMainView() {
                                  src={data.image}
                                  alt="vape image"/>
                             <div className={"flex flex-col ml-2"}>
-                                <span className={'text-2xl'}>{data.title}</span>
+                                <div>
+                                    <span className={'text-2xl'}>{data.title}</span> {
+                                    data?.nicotine && <span
+                                        className={'text-1xl'}>{data.nicotine}%</span>}
+                                </div>
                                 <div className={"flex"}>
                                     <div>Rs. <span
                                         className={data?.price?.discount ? "line-through" : ""}>{data?.price?.mp}</span>
