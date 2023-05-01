@@ -1,42 +1,9 @@
 import React from 'react';
+import {CATEGORY} from "../../../data/datalist";
 
 function Category({categoryType}) {
-    const categories = [
-        {
-            image: "https://th.bing.com/th/id/OIP._XbHr-dhVE12xWc4WfzxZgHaDt?pid=ImgDet&rs=1",
-            title: "Gunnpod Air 3000",
-            category: "gunnpod_air_3000"
+    const categories = CATEGORY;
 
-        }, {
-            image: "https://vapewizarddxb.com/wp-content/uploads/2022/08/VAAL-EP-4500-760x760.png",
-            title: "Val",
-            category: "val"
-
-        },
-        {
-            image: "https://th.bing.com/th/id/R.9fd4e5da0bbe2091197897f4b3f3d364?rik=F5ciwxTB0jAx1Q&pid=ImgRaw&r=0",
-            title: "DragBar 5000",
-            category: "drag_bar_5000"
-        },
-        {
-            image: "https://cdn.shopify.com/s/files/1/0551/1217/1601/products/iget-pro-fruit-gummy-min_grande.jpg?v=1664899911",
-            title: "IGET Pro 5000",
-            category: "iget_pro_5000"
-        },
-        {
-            image: "https://cdn.shopify.com/s/files/1/0035/7721/7139/products/WhatsAppImage2022-05-13at4.34.17PM_580x@2x.jpg?v=1652476316",
-            title: "Elf bar",
-            category: "elf_bar_5000"
-        },
-        {
-            image: "https://th.bing.com/th/id/OIP.rbmmsSfSKAVlQKP_WUVAfQHaHa?pid=ImgDet&rs=1",
-            title: "DragBar 6000",
-            category: "drag_bar_6000"
-
-        },
-
-
-    ];
     const imageOnError = (event) => {
         event.currentTarget.src = "https://cdn2.iconfinder.com/data/icons/vape/100/05-512.png";
         event.currentTarget.className = "error";
