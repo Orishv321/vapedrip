@@ -16,6 +16,9 @@ import Coconut_Ice_cream from "../src/images/Val/Coconut_Ice_cream.jpeg";
 import peach_mango_watermelon from "../src/images/Val/peach_mango_watermelon.jpeg";
 
 
+const singlePrice = 150;
+const minProfit = 200;
+
 //Category info
 export const GUNNPOD_AIR_3000 = 'gunnpod_air_3000';
 export const VAL_4500 = 'val_4500';
@@ -68,66 +71,87 @@ export const CATEGORY = [
 
 export const PRODUCT_PRICES = {
     [GUNNPOD_AIR_3000]: {
-        CP: 800 + 150,
+        CP: 800 + singlePrice,
         MP: 1000,
+        min_MP: 1000,
         discount: 0,
         hamroPrices: {
             maxPrice: 1000,
-            minPriceToSell: 900
+            minPriceToSell: 1000,
+            cpw: 800,
+            singlePrice: 800 + singlePrice
         }
     },
     [VAL_4500]: {
-        CP: 1900 + 150,
+        CP: 1900 + singlePrice,
         MP: 1000,
+        min_MP: 2400,
         discount: 10,
         hamroPrices: {
-            maxPrice: 1,
-            minPriceToSell: 2350
+            maxPrice: 2800,
+            minPriceToSell: 1900 + singlePrice + minProfit,
+            cpw: 1900,
+            singlePrice: 1900 + singlePrice
         }
     },
     [DRAGBAR_5000]: {
-        CP: 1750 + 150,
+        CP: 1750 + singlePrice,
         MP: 2500,
+        min_MP: 2100,
         discount: 10,
         hamroPrices: {
             maxPrice: 2500,
-            minPriceToSell: 2250
+            minPriceToSell: 1750 + singlePrice + minProfit,
+            cpw: 1750,
+            singlePrice: 1750 + singlePrice
         }
     },
     [IGET_PRO_5000]: {
-        CP: 1550 + 150,
+        CP: 1550 + singlePrice,
         MP: 2800,
+        min_MP: 2000,
         discount: 10,
         hamroPrices: {
             maxPrice: 2800,
-            minPriceToSell: 2300
+            minPriceToSell: 1550 + singlePrice + minProfit,
+            cpw: 1750,
+            singlePrice: 1750 + singlePrice
         }
     },
     [ELF_BAR_6000]: {
-        CP: 2000 + 150,
+        CP: 2000 + singlePrice,
         MP: 2800,
+        min_MP: 2400,
         discount: 10,
         hamroPrices: {
-            maxPrice: 2800,
-            minPriceToSell: 2300
+            maxPrice: 2600,
+            minPriceToSell: 2000 + singlePrice + minProfit,
+            cpw: 2000,
+            singlePrice: 2000 + singlePrice
         }
     },
     [DRAGBAR_6000]: {
-        CP: 2000 + 150,
-        MP: 2800,
+        CP: 2000 + singlePrice,
+        MP: 3000,
+        min_MP: 2200,
         discount: 10,
         hamroPrices: {
-            maxPrice: 2800,
-            minPriceToSell: 2300
+            maxPrice: 3000,
+            minPriceToSell: 2000 + singlePrice + minProfit,
+            cpw: 2000,
+            singlePrice: 2000 + singlePrice
         }
     },
     [NORBAR_4000]: {
-        CP: 1100 + 150,
-        MP: 2800,
+        CP: 1100 + singlePrice,
+        MP: 2500,
+        min_MP: 2000,
         discount: 10,
         hamroPrices: {
-            maxPrice: 2800,
-            minPriceToSell: 2300
+            maxPrice: 2500,
+            minPriceToSell: 1100 + singlePrice + minProfit,
+            cpw: 1100,
+            singlePrice: 1100 + singlePrice
         }
     },
 };
@@ -294,20 +318,90 @@ export const PRODUCT_FLAVORS = {
         },
     ],
     [ELF_BAR_6000]: [
-        {nicotine: [5], flavorCombo: ["Sakura", "Grape"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-SAKURAGRAPE-min_5000x.jpg?v=1662962172',},
-        {nicotine: [5], flavorCombo: ["Grape", "Honeydew"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/3_5000x.jpg?v=1662959718',},
-        {nicotine: [5], flavorCombo: ["Cranberry", "Grape"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-CRANBERRYGRAPE-min_5000x.jpg?v=1662962173',},
-        {nicotine: [5], flavorCombo: ["Popcorn", "Caramel"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/4_5000x.jpg?v=1662959717',},
-        {nicotine: [5], flavorCombo: ["Cola Ice"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/5_5000x.jpg?v=1662959717',},
-        {nicotine: [5], flavorCombo: ["Vanilla Ice Cream"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-VANILLAICECREAM-min_5000x.jpg?v=1662962172',},
-        {nicotine: [5], flavorCombo: ["Strawberry", "Mango"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-STRAWBERRRYMANGO-min_5000x.jpg?v=1662962171',},
-        {nicotine: [5], flavorCombo: ["Cool Mint"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/1_5000x.jpg?v=1662959718',},
-        {nicotine: [5], flavorCombo: ["Vanilla Custard"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-VANILLACUSTARD-min_5000x.jpg?v=1662962171',},
-        {nicotine: [5], flavorCombo: ["Strawberry", "Juicy", "Peach"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/6_5000x.jpg?v=1662959718',},
-        {nicotine: [5], flavorCombo: ["Peach", "Mango", "Watermelon"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-PEACHMANGOWATERMELON-min_5000x.jpg?v=1662962170',},
-        {nicotine: [5], flavorCombo: ["Durian King"], flavorInfo: "", image: 'https://product.hstatic.net/200000491451/product/durian-king__1__0feff4498f36423cb29a0b8eafbafe65_master.jpg',},
-        {nicotine: [5], flavorCombo: ["Banana"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-BANANA-min_5000x.jpg?v=1662962171',},
-        {nicotine: [5], flavorCombo: ["Taro Yam"], flavorInfo: "", image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ElfBarTE6000_5000x.png?v=1666063850',},
+        {
+            nicotine: [5],
+            flavorCombo: ["Sakura", "Grape"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-SAKURAGRAPE-min_5000x.jpg?v=1662962172',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Grape", "Honeydew"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/3_5000x.jpg?v=1662959718',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Cranberry", "Grape"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-CRANBERRYGRAPE-min_5000x.jpg?v=1662962173',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Popcorn", "Caramel"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/4_5000x.jpg?v=1662959717',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Cola Ice"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/5_5000x.jpg?v=1662959717',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Vanilla Ice Cream"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-VANILLAICECREAM-min_5000x.jpg?v=1662962172',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Strawberry", "Mango"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-STRAWBERRRYMANGO-min_5000x.jpg?v=1662962171',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Cool Mint"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/1_5000x.jpg?v=1662959718',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Vanilla Custard"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-VANILLACUSTARD-min_5000x.jpg?v=1662962171',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Strawberry", "Juicy", "Peach"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/6_5000x.jpg?v=1662959718',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Peach", "Mango", "Watermelon"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-PEACHMANGOWATERMELON-min_5000x.jpg?v=1662962170',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Durian King"],
+            flavorInfo: "",
+            image: 'https://product.hstatic.net/200000491451/product/durian-king__1__0feff4498f36423cb29a0b8eafbafe65_master.jpg',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Banana"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ELFBARTE6000DISPOSABLEPOD-BANANA-min_5000x.jpg?v=1662962171',
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Taro Yam"],
+            flavorInfo: "",
+            image: 'https://cdn.shopify.com/s/files/1/0054/1235/6194/products/ElfBarTE6000_5000x.png?v=1666063850',
+        },
     ],
     [DRAGBAR_6000]: [
         {
@@ -559,3 +653,37 @@ export const productDisplayByCategory = (category) => {
     console.log(send);
     return send;
 }
+
+
+export const productDisplayAllAdmin = () => {
+    let send = [];
+
+    Object.values(PRODUCTS)?.forEach((product, key) => {
+
+        (product?.flavorsInfo).forEach((flavor, key) => {
+            send.push({
+                title: (product?.title + " " + flavor?.flavorCombo.join(" - ")).toUpperCase(),
+                category: product?.category,
+                nicotine: flavor?.nicotine.join(", "),
+                description: product?.description?.detail,
+                image: flavor?.image,
+                flavor: flavor?.flavorCombo.join(" - ").toUpperCase(),
+                extraFlavorInformation: flavor?.flavorInfo,
+                price: {
+                    cp: Number(product?.prices?.CP),
+                    mp: Number(product?.prices?.MP),
+                    min_mp: Number(product?.prices?.min_MP),
+                    discount: (Number(product?.prices?.discount)),
+                    amount: Number(product?.prices?.MP) - Number(product?.prices?.MP) * (Number(product?.prices?.discount) / 100),
+                    //seling prices
+                    minPriceToSell: Number(product?.prices?.hamroPrices?.minPriceToSell),
+                    cpw: Number(product?.prices?.hamroPrices?.cpw),
+                    singlePrice: Number(product?.prices?.hamroPrices?.singlePrice),
+                }
+            });
+        })
+
+    });
+    console.log(send);
+    return send;
+};
