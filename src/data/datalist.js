@@ -84,7 +84,7 @@ export const PRODUCT_PRICES = {
     },
     [VAL_4500]: {
         CP: 1900 + singlePrice,
-        MP: 1000,
+        MP: 2800,
         min_MP: 2400,
         discount: 10,
         hamroPrices: {
@@ -579,7 +579,7 @@ export const PRODUCTS = {
 
     [ELF_BAR_6000]:
         {
-            title: "ELF BAR 5000",
+            title: "ELF BAR 6000",
             category: ELF_BAR_6000,
             flavorsInfo: PRODUCT_FLAVORS[ELF_BAR_6000],
             description: {

@@ -41,7 +41,7 @@ export default function UserMainView() {
                                 <div>
                                     <span className={'text-2xl'}>{data.title}</span> {
                                     data?.nicotine && <span
-                                        className={'text-1xl'}>{data.nicotine}%</span>}
+                                        className={'text-1xl m-2'}>{data.nicotine}%</span>}
                                 </div>
                                 <div className={"flex"}>
                                     <div>Rs. <span
