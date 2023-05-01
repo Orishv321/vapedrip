@@ -48,10 +48,10 @@ export default function UserMainView() {
                                         className={data?.price?.discount ? "line-through" : ""}>{data?.price?.mp}</span>
                                     </div>
                                     {
-                                        data?.price?.discount &&
+                                        data?.price?.discount ?
                                         <div className={"ml-2"}>
                                             Rs.<span> {data?.price?.amount}</span>
-                                        </div>
+                                        </div> : ""
                                     }
                                 </div>
                             </div>
