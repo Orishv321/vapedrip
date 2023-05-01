@@ -21,7 +21,7 @@ const minProfit = 200;
 
 //Category info
 export const GUNNPOD_AIR_3000 = 'gunnpod_air_3000';
-export const VAL_4500 = 'val_4500';
+export const VAAL_4500 = 'vaal_4500';
 export const DRAGBAR_5000 = 'dragbar_4500';
 export const IGET_PRO_5000 = 'iget_pro_5000';
 export const ELF_BAR_6000 = 'elf_bar_6000';
@@ -42,8 +42,8 @@ export const CATEGORY = [
     // },
     {
         image: "https://vapewizarddxb.com/wp-content/uploads/2022/08/VAAL-EP-4500-760x760.png",
-        title: "Val",
-        category: VAL_4500
+        title: "Vaal",
+        category: VAAL_4500
 
     },
     {
@@ -82,7 +82,7 @@ export const PRODUCT_PRICES = {
             singlePrice: 800 + singlePrice
         }
     },
-    [VAL_4500]: {
+    [VAAL_4500]: {
         CP: 1900 + singlePrice,
         MP: 2800,
         min_MP: 2400,
@@ -114,8 +114,8 @@ export const PRODUCT_PRICES = {
         hamroPrices: {
             maxPrice: 2800,
             minPriceToSell: 1550 + singlePrice + minProfit,
-            cpw: 1750,
-            singlePrice: 1750 + singlePrice
+            cpw: 1550,
+            singlePrice: 1550 + singlePrice
         }
     },
     [ELF_BAR_6000]: {
@@ -171,15 +171,23 @@ export const PRODUCT_FLAVORS = {
         {nicotine: [5], flavorCombo: ["PINEAPPLE", "ORANGE ", "GUAVA"], flavorInfo: "", image: Pineapple_orange_guava},
         {nicotine: [5], flavorCombo: ["MANGO ", "PEACH"], flavorInfo: "", image: Mango_Peach},
     ],
-    [VAL_4500]: [
+    [VAAL_4500]: [
         {
             nicotine: [5],
             flavorCombo: ["Strawberry", "Kiwi", "Litchi"],
             flavorInfo: "",
             image: 'https://joyetech.us/media/catalog/product/cache/2/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/e/p/ep4500_2_.jpg',
         },
-        {nicotine: [5], flavorCombo: ["Coconut", "Ice creaam"], flavorInfo: "", image: Coconut_Ice_cream,},
-        {nicotine: [5], flavorCombo: ["Peach", "Mango", "Watermelon"], flavorInfo: "", image: peach_mango_watermelon},
+        {
+            nicotine: [5],
+            flavorCombo: ["Coconut", "Ice creaam"],
+            flavorInfo: "", image: Coconut_Ice_cream,
+        },
+        {
+            nicotine: [5],
+            flavorCombo: ["Peach", "Mango", "Watermelon"],
+            flavorInfo: "", image: peach_mango_watermelon
+        },
         {
             nicotine: [5],
             flavorCombo: ["Bherry Coke"],
@@ -538,17 +546,17 @@ export const PRODUCTS = {
     //         images: PRODUCT_FLAVORS[NORBAR_4000][0]?.images,
     //         prices: PRODUCT_PRICES[NORBAR_4000]
     //     },
-    [VAL_4500]:
+    [VAAL_4500]:
         {
             title: "VAL 4500",
-            category: VAL_4500,
-            flavorsInfo: PRODUCT_FLAVORS[VAL_4500],
+            category: VAAL_4500,
+            flavorsInfo: PRODUCT_FLAVORS[VAAL_4500],
             description: {
                 quantity: '',
                 detail: '',
             },
-            images: PRODUCT_FLAVORS[VAL_4500][0]?.images,
-            prices: PRODUCT_PRICES[VAL_4500]
+            images: PRODUCT_FLAVORS[VAAL_4500][0]?.images,
+            prices: PRODUCT_PRICES[VAAL_4500]
         },
 
     [DRAGBAR_5000]:
