@@ -23,7 +23,7 @@ export default function UserMainView() {
     return (
         <section>
             <Category categoryType={categoryType}/>
-            <section className={"bg-gray-50 mt-2 p-2 border"}>
+            <section className={"flex flex-col flex-wrap bg-gray-50 mt-2 p-2 border"}>
 
                 {
                     categorySelected !== "all"

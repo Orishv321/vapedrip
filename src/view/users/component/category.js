@@ -21,7 +21,7 @@ function Category({categoryType}) {
                 </button>
             </section>
 
-            <section className="flex">
+            <section className="flex flex-wrap">
                 {
                     categories.map((category, key) => (
                         <div key={key}
