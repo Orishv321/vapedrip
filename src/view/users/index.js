@@ -24,7 +24,14 @@ export default function UserMainView() {
         <section>
             <Category categoryType={categoryType}/>
             <section className={"bg-gray-50 mt-2 p-2 border"}>
-                <div className={"text-2xl font-bold"}>Products</div>
+
+                {
+                    categorySelected !== "all"
+                    && <div className={"text-2xl font-bold"}>{categorySelected.replaceAll("_", " ").toUpperCase()}</div>
+                    || <div className={"text-2xl font-bold"}>Products</div>
+
+                }
+
                 {
                     displayProducts?.map((data, key) => <div className={"flex items-center border-b-2"} key={key}>
                             <img className={"h-20 w-20 mb-2"}
