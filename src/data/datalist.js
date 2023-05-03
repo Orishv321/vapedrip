@@ -22,7 +22,7 @@ const minProfit = 200;
 //Category info
 export const GUNNPOD_AIR_3000 = 'gunnpod_air_3000';
 export const VAAL_4500 = 'vaal_4500';
-export const DRAGBAR_5000 = 'dragbar_4500';
+export const DRAGBAR_5000 = 'dragbar_5000';
 export const IGET_PRO_5000 = 'iget_pro_5000';
 export const ELF_BAR_6000 = 'elf_bar_6000';
 export const DRAGBAR_6000 = 'drag_bar_6000';
