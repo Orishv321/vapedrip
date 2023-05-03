@@ -634,7 +634,6 @@ export const productDisplayAll = () => {
         })
 
     });
-    console.log(send);
     return send;
 };
 
@@ -658,7 +657,6 @@ export const productDisplayByCategory = (category) => {
         });
     })
 
-    console.log(send);
     return send;
 }
 
@@ -692,6 +690,5 @@ export const productDisplayAllAdmin = () => {
         })
 
     });
-    console.log(send);
     return send;
 };
