@@ -174,13 +174,13 @@ export const PRODUCT_FLAVORS = {
     [VAAL_4500]: [
         {
             nicotine: [5],
-            flavorCombo: ["Strawberry", "Kiwi", "Litchi"],
+            flavorCombo: ["Strawberry", "Kiwi", "Lychee"],
             flavorInfo: "",
             image: 'https://joyetech.us/media/catalog/product/cache/2/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/e/p/ep4500_2_.jpg',
         },
         {
             nicotine: [5],
-            flavorCombo: ["Coconut", "Ice creaam"],
+            flavorCombo: ["Coconut", "Ice cream"],
             flavorInfo: "", image: Coconut_Ice_cream,
         },
         {
@@ -190,7 +190,7 @@ export const PRODUCT_FLAVORS = {
         },
         {
             nicotine: [5],
-            flavorCombo: ["Bherry Coke"],
+            flavorCombo: ["Cherry Coke"],
             flavorInfo: "",
             image: 'https://joyetech.us/media/catalog/product/cache/2/thumbnail/600x/17f82f742ffe127f42dca9de82fb58b1/e/p/ep4500_2_.jpg',
         },
@@ -258,7 +258,7 @@ export const PRODUCT_FLAVORS = {
         },
         {
             nicotine: [5],
-            flavorCombo: ["Vanila Cream", "Tabacco"],
+            flavorCombo: ["Vanilla Cream", "Tobacco"],
             flavorInfo: "",
             image: "https://vapewh.com/cdn/shop/products/dragbar-b5000-vanilla-cream-tobacco_800x.jpg?v=1671680767",
         },
